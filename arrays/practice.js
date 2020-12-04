@@ -123,6 +123,7 @@ function evenFinder(nums){
 var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
 // Do not edit the code above.
 
+
 /*
   Write a function called divider that is given one argument, numbersArray.
   Have divider return an array with the first item in the array being the evens array (all the even values from numbersArray)
@@ -130,7 +131,19 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
 */
 
 //Code Here
+function divider(numbersArray){
+  let evenArray = [];
+  let oddArray = [];
 
+  for (let i = 0; i < numbersArray.length; i++){
+    if (numbersArray[i] % 2 === 0){
+      evenArray.push(numbersArray[i]);
+    } else {
+      oddArray.push(numbersArray[i]);
+    }
+  }
+  return [evenArray, oddArray];
+};
 
 
 ////////// PROBLEM 7 //////////
@@ -152,7 +165,16 @@ var getRandomArbitrary = function() {
 */
 
 //Code Here
+function finder(arr){
+  let randomNumber = getRandomArbitrary();
 
+  for (let i = 0; i < arr.length; i++){
+    if (arr[i] === randomNumber){
+      return true;
+    }
+  }
+  return false;
+};
 
 
 ////////// PROBLEM 8 //////////
